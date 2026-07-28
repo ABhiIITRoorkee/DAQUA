@@ -1,0 +1,51 @@
+# Install required packages
+python3 -m pip install numpy pandas scikit-learn imbalanced-learn
+
+# Quick test run
+nohup python3 main.py \
+  --root Data-set \
+  --out test_results.csv \
+  --runs 1 \
+  --target_dataset ALL \
+  > test_run.log 2>&1 &
+
+# Full run on all supported datasets
+nohup python3 main.py \
+  --root Data-set \
+  --out Master_cpdp_results.csv \
+  --runs 5 \
+  --target_dataset ALL \
+  > Master_cpdp_results.log 2>&1 &
+
+# Run AEEEM only
+nohup python3 main.py \
+  --root Data-set \
+  --out AEEEM_results.csv \
+  --runs 5 \
+  --target_dataset AEEEM \
+  > AEEEM_results.log 2>&1 &
+
+# Run JIRA only
+nohup python3 main.py \
+  --root Data-set \
+  --out JIRA_results.csv \
+  --runs 5 \
+  --target_dataset JIRA \
+  > JIRA_results.log 2>&1 &
+
+# Run Promise only
+nohup python3 main.py \
+  --root Data-set \
+  --out Promise_results.csv \
+  --runs 5 \
+  --target_dataset Promise \
+  > Promise_results.log 2>&1 &
+
+# Check whether jobs are still running
+ps aux | grep "python3 main.py" | grep -v grep
+
+# Watch a log file live
+tail -f Master_cpdp_results.log
+
+# Stop all running project jobs, if needed
+pkill -f "python3 main.py"

@@ -1,0 +1,10 @@
+dataset,n_projects,mean_suspicious_feature_rate,mean_temporal_feature_count,mean_post_release_feature_count,mean_high_label_correlation_count,mean_duplicate_instance_rate,mean_cross_project_duplicate_rate,mean_leakage_score,leakage_level,warnings
+AEEEM,5,0.2631578947368421,0.0,1.0,0.0,0.0,0.0036246037278503214,79.276,moderate_leakage_risk,possible_cross_project_contamination;possible_post_release_features;suspicious_feature_names
+ApacheJIT,1,0.06666666666666667,1.0,1.0,0.0,0.0,0.0,90.0,low_leakage_risk,possible_post_release_features;suspicious_feature_names
+BugHunter,15,0.0,0.0,0.0,0.0,0.0,0.011489243036739332,97.702,low_leakage_risk,possible_cross_project_contamination
+JIRA,7,0.13432835820895522,3.0,0.0,0.0,0.0,0.00026977752677007663,89.87571428571428,moderate_leakage_risk,suspicious_feature_names
+Kamei,3,0.06666666666666667,0.0,1.0,0.0,0.0,0.0,90.0,low_leakage_risk,possible_post_release_features;suspicious_feature_names
+NASA,9,0.0,2.0,0.0,0.0,0.0,0.05350644085016304,95.34111111111112,low_leakage_risk,possible_cross_project_contamination
+Promise,7,0.0,0.0,0.0,0.0,0.0,0.017100921902192034,96.57857142857142,low_leakage_risk,possible_cross_project_contamination
+ReLink,3,0.0,3.0,0.0,0.0,0.0,0.0,100.0,low_leakage_risk,none
+UnifiedBugDataSet_File,1,0.0,0.0,0.0,0.0,0.0,0.0,100.0,low_leakage_risk,none

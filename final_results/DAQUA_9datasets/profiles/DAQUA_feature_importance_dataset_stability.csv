@@ -1,0 +1,10 @@
+dataset,n_projects,mean_project_feature_importance_stability,std_project_feature_importance_stability,mean_pairwise_project_top10_jaccard,mean_pairwise_project_spearman,dataset_feature_importance_stability_score,dataset_feature_importance_stability_level,warnings
+AEEEM,5,61.044000000000004,5.3413509527085,0.6370296370296369,0.5140350877192983,66.82,limited,limited_feature_importance_stability
+ApacheJIT,1,60.06,,,,60.06,limited,limited_feature_importance_stability
+BugHunter,15,69.42733333333334,5.95808750075615,1.0,0.5526530612244899,82.35,moderate,none
+JIRA,7,34.48285714285714,3.109382115928684,0.18492579217921987,0.5353427666860503,43.25,low,unstable_feature_importance
+Kamei,3,58.120000000000005,2.9409352254002497,0.5018315018315018,0.3273809523809524,58.22,limited,limited_feature_importance_stability
+NASA,9,32.85999999999999,8.05597604266547,0.23446197717353545,0.3090050646931307,40.59,low,unstable_feature_importance
+Promise,7,50.6,8.013752762179111,0.45703409568955794,0.4464733261725743,56.21,limited,limited_feature_importance_stability
+ReLink,3,39.22666666666667,6.982988853874345,0.4761904761904761,0.535042735042735,54.53,limited,limited_feature_importance_stability
+UnifiedBugDataSet_File,1,92.42,,,,92.42,high,none

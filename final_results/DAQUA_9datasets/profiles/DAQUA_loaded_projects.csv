@@ -1,0 +1,52 @@
+dataset,project,path,raw_rows,raw_columns,clean_rows,clean_features,label_column,dropped_columns_count
+AEEEM,equinox,Data-set/AEEEM-defect-dataset/equinox.csv,324,22,241,19,bugs,3
+AEEEM,jdt,Data-set/AEEEM-defect-dataset/jdt.csv,997,22,972,19,bugs,3
+AEEEM,lucene,Data-set/AEEEM-defect-dataset/lucene.csv,691,22,539,19,bugs,3
+AEEEM,mylyn,Data-set/AEEEM-defect-dataset/mylyn.csv,1862,22,1607,19,bugs,3
+AEEEM,pde,Data-set/AEEEM-defect-dataset/pde.csv,1497,22,1434,19,bugs,3
+BugHunter,full_Android-Universal-Image-Loader_file,Data-set/BugHunterDataset-1.0/full/Android-Universal-Image-Loader/file.csv,171,9,160,6,Number of Bugs,3
+BugHunter,full_BroadleafCommerce_file,Data-set/BugHunterDataset-1.0/full/BroadleafCommerce/file.csv,3561,9,2888,6,Number of Bugs,3
+BugHunter,full_MapDB_file,Data-set/BugHunterDataset-1.0/full/MapDB/file.csv,588,9,537,6,Number of Bugs,3
+BugHunter,full_antlr4_file,Data-set/BugHunterDataset-1.0/full/antlr4/file.csv,379,9,359,6,Number of Bugs,3
+BugHunter,full_ceylon-ide-eclipse_file,Data-set/BugHunterDataset-1.0/full/ceylon-ide-eclipse/file.csv,1164,9,965,6,Number of Bugs,3
+BugHunter,full_elasticsearch_file,Data-set/BugHunterDataset-1.0/full/elasticsearch/file.csv,25120,9,20220,6,Number of Bugs,3
+BugHunter,full_hazelcast_file,Data-set/BugHunterDataset-1.0/full/hazelcast/file.csv,23353,9,17395,6,Number of Bugs,3
+BugHunter,full_junit_file,Data-set/BugHunterDataset-1.0/full/junit/file.csv,203,9,191,6,Number of Bugs,3
+BugHunter,full_mcMMO_file,Data-set/BugHunterDataset-1.0/full/mcMMO/file.csv,880,9,760,6,Number of Bugs,3
+BugHunter,full_mct_file,Data-set/BugHunterDataset-1.0/full/mct/file.csv,58,9,55,6,Number of Bugs,3
+BugHunter,full_neo4j_file,Data-set/BugHunterDataset-1.0/full/neo4j/file.csv,3944,9,3655,6,Number of Bugs,3
+BugHunter,full_netty_file,Data-set/BugHunterDataset-1.0/full/netty/file.csv,5125,9,4566,6,Number of Bugs,3
+BugHunter,full_orientdb_file,Data-set/BugHunterDataset-1.0/full/orientdb/file.csv,4448,9,3925,6,Number of Bugs,3
+BugHunter,full_oryx_file,Data-set/BugHunterDataset-1.0/full/oryx/file.csv,608,9,513,6,Number of Bugs,3
+BugHunter,full_titan_file,Data-set/BugHunterDataset-1.0/full/titan/file.csv,486,9,462,6,Number of Bugs,3
+JIRA,activemq-5.8.0,Data-set/JIRA/activemq-5.8.0.csv,3420,69,2825,67,RealBug,2
+JIRA,derby-10.5.1.1,Data-set/JIRA/derby-10.5.1.1.csv,2705,69,2681,67,RealBug,2
+JIRA,groovy-1_6_BETA_2,Data-set/JIRA/groovy-1_6_BETA_2.csv,884,69,868,67,RealBug,2
+JIRA,hbase-0.95.2,Data-set/JIRA/hbase-0.95.2.csv,1834,69,1821,67,RealBug,2
+JIRA,hive-0.12.0,Data-set/JIRA/hive-0.12.0.csv,2662,69,2537,67,RealBug,2
+JIRA,jruby-1.7.0.preview1,Data-set/JIRA/jruby-1.7.0.preview1.csv,1614,69,1576,67,RealBug,2
+JIRA,wicket-1.5.3,Data-set/JIRA/wicket-1.5.3.csv,2578,69,2521,67,RealBug,2
+Kamei,bugzilla,Data-set/Kamei/bugzilla.csv,4620,17,4620,15,bug,2
+Kamei,columba,Data-set/Kamei/columba.csv,4455,17,4455,15,bug,2
+Kamei,postgres,Data-set/Kamei/postgres.csv,20431,17,20431,15,bug,2
+NASA,CM1,Data-set/NASA/CM1.csv,344,39,327,37,Defective,2
+NASA,KC3,Data-set/NASA/KC3.csv,200,41,194,39,Defective,2
+NASA,MC2,Data-set/NASA/MC2.csv,125,41,124,39,Defective,2
+NASA,MW1,Data-set/NASA/MW1.csv,263,39,254,37,Defective,2
+NASA,PC1,Data-set/NASA/PC1.csv,735,39,691,37,Defective,2
+NASA,PC2,Data-set/NASA/PC2.csv,1493,38,722,36,Defective,2
+NASA,PC3,Data-set/NASA/PC3.csv,1099,39,1057,37,Defective,2
+NASA,PC4,Data-set/NASA/PC4.csv,1379,39,1272,37,Defective,2
+NASA,PC5,Data-set/NASA/PC5.csv,16962,40,1718,38,Defective,2
+Promise,ant-1.7,Data-set/Promise/ant-1.7.csv,745,24,724,20,bug,4
+Promise,camel-1.6,Data-set/Promise/camel-1.6.csv,965,24,884,20,bug,4
+Promise,jedit-4.3,Data-set/Promise/jedit-4.3.csv,492,24,476,20,bug,4
+Promise,prop-2,Data-set/Promise/prop-2.csv,23014,23,13183,20,bug,3
+Promise,velocity-1.6,Data-set/Promise/velocity-1.6.csv,229,24,211,20,bug,4
+Promise,xalan-2.7,Data-set/Promise/xalan-2.7.csv,909,24,740,20,bug,4
+Promise,xerces-1.4,Data-set/Promise/xerces-1.4.csv,588,24,490,20,bug,4
+ReLink,Apache,Data-set/ReLinkCSV/Apache.csv,194,28,194,26,isDefective,2
+ReLink,Safe,Data-set/ReLinkCSV/Safe.csv,56,28,56,26,isDefective,2
+ReLink,Zxing,Data-set/ReLinkCSV/Zxing.csv,399,28,354,26,isDefective,2
+UnifiedBugDataSet_File,Unified-file,Data-set/UnifiedBugDataSet_File/Unified-file.csv,43744,11,35829,6,bug,5
+ApacheJIT,dataset_apachejit_total,Data-set/apachejit/dataset/apachejit_total.csv,106674,18,106272,15,buggy,3

@@ -1,0 +1,208 @@
+nohup: ignoring input
+2026-07-09 01:35:16,324 | INFO | Starting DAQUA pipeline
+2026-07-09 01:35:16,324 | INFO | Dataset root: Data-set
+2026-07-09 01:35:16,324 | INFO | Output directory: outputs/profiles_9datasets_full
+2026-07-09 01:35:16,324 | INFO | Loading dataset folder 'AEEEM-defect-dataset' as 'AEEEM' | candidate files=5
+2026-07-09 01:35:16,430 | INFO | Dataset 'AEEEM' loaded projects=5 | skipped files=0
+2026-07-09 01:35:16,436 | INFO | Loading dataset folder 'BugHunterDataset-1.0' as 'BugHunter' | candidate files=15
+2026-07-09 01:35:16,962 | INFO | Dataset 'BugHunter' loaded projects=15 | skipped files=0
+2026-07-09 01:35:16,962 | INFO | Loading dataset folder 'ContinuousDefect' as 'ContinuousDefect' | candidate files=1
+2026-07-09 01:35:43,805 | WARNING | No label column found. Skipping Data-set/ContinuousDefect/ContinuousDefect.csv | dataset=ContinuousDefect | columns=['Id', 'Path', 'OldPath', 'NumberOfRevisions', 'NumberOfDistinctCommitters', 'NumberOfModifiedLines', 'BuildResult', 'Commit', 'BuildCommit', 'ExportDateUtc', 'TotalNumberOfRevisions', 'BuildDateTimeLocal', 'BuildCommitDateTimeLocal', 'BuildProjectName', 'Author', 'PreviousBuildResult', 'ProjectName']
+2026-07-09 01:35:43,929 | INFO | Dataset 'ContinuousDefect' loaded projects=0 | skipped files=1
+2026-07-09 01:35:43,930 | INFO | Loading dataset folder 'GHPR_dataset-master' as 'GHPR' | candidate files=1
+2026-07-09 01:36:22,182 | WARNING | No label column found. Skipping Data-set/GHPR_dataset-master/ghprdata/ghprdata.csv | dataset=GHPR | columns=['Gadgetbridge', 'Freeyourgadget', "Github mirror of Gadgetbridge - A free and cloudless replacement for your gadget vendors' closed source Android applications. Supports Pebble, Mi Band, Liveview, HPlus and more.", 'activity post processing,activity/health,android integrations/notifications,bug,charts,device amazfit bip,device amazfit cor,device h30,device hplus,device liveview,device mi,device mi2,device mi3,device no.1 f1,device pace,device pebble,device pebble 2,device request,device watch 9,discussion,documentation,duplicate,enhancement,feature request,help wanted,invalid,needs work,no feedback,not a bug,one of the 1000 issues about disconnection,pairing/connecting,potentially fixed / needs confirmation,question,research,security,task,user interface / UX,wontfix', 'Java', '000f1ab4780fc9460975791c52597f7c04e15be7', 'ece0f094eb56219ae5188dcd37b90590a9f4029d', 'diff --git a/app/src/main/java/nodomain/freeyourgadget/gadgetbridge/model/DeviceType.java b/app/src/main/java/nodomain/freeyourgadget/gadgetbridge/model/DeviceType.java\nindex 388a98a..de07347 100644\n--- a/app/src/main/java/nodomain/freeyourgadget/gadgetbridge/model/DeviceType.java\n+++ b/app/src/main/java/nodomain/freeyourgadget/gadgetbridge/model/DeviceType.java\n@@ -49,8 +49,8 @@\n     ZETIME(80, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_mykronoz_zetime),\n     ID115(90, R.drawable.ic_device_h30_h10, R.drawable.ic_device_h30_h10_disabled, R.string.devicetype_id115),\n     WATCH9(100, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_watch9),\n-    ROIDMI(100, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi),\n-    ROIDMI3(102, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi3),\n+    ROIDMI(110, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi),\n+    ROIDMI3(112, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi3),\n     TEST(1000, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_test);\n \n     private final int key;', 'Fix duplicated DeviceType key introduced by the #1179 rebase.', '20180902', '/*  Copyright (C) 2015-2018 Andreas Shimokawa, Carsten Pfeiffer, Daniele\n    Gobbetti, João Paulo Barraca, José Rebelo, Kranz, ladbsoft, maxirnilian,\n    protomors, Quallenauge, Sami Alaoui, tiparega, Vadim Kaushan\n\n    This file is part of Gadgetbridge.\n\n    Gadgetbridge is free software: you can redistribute it and/or modify\n    it under the terms of the GNU Affero General Public License as published\n    by the Free Software Foundation, either version 3 of the License, or\n    (at your option) any later version.\n\n    Gadgetbridge is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n    GNU Affero General Public License for more details.\n\n    You should have received a copy of the GNU Affero General Public License\n    along with this program.  If not, see <http://www.gnu.org/licenses/>. */\npackage nodomain.freeyourgadget.gadgetbridge.model;\n\nimport android.support.annotation.DrawableRes;\nimport android.support.annotation.StringRes;\n\nimport nodomain.freeyourgadget.gadgetbridge.R;\n\n/**\n * For every supported device, a device type constant must exist.\n *\n * Note: they key of every constant is stored in the DB, so it is fixed forever,\n * and may not be changed.\n */\npublic enum DeviceType {\n    UNKNOWN(-1, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_unknown),\n    PEBBLE(1, R.drawable.ic_device_pebble, R.drawable.ic_device_pebble_disabled, R.string.devicetype_pebble),\n    MIBAND(10, R.drawable.ic_device_miband, R.drawable.ic_device_miband_disabled, R.string.devicetype_miband),\n    MIBAND2(11, R.drawable.ic_device_miband2, R.drawable.ic_device_miband2_disabled, R.string.devicetype_miband2),\n    AMAZFITBIP(12, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_amazfit_bip),\n    AMAZFITCOR(13, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_amazfit_cor),\n    MIBAND3(14, R.drawable.ic_device_miband2, R.drawable.ic_device_miband2_disabled, R.string.devicetype_miband3),\n    VIBRATISSIMO(20, R.drawable.ic_device_lovetoy, R.drawable.ic_device_lovetoy_disabled, R.string.devicetype_vibratissimo),\n    LIVEVIEW(30, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_liveview),\n    HPLUS(40, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_hplus),\n    MAKIBESF68(41, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_makibes_f68),\n    EXRIZUK8(42, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_exrizu_k8),\n    Q8(43, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_q8),\n    NO1F1(50, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_no1_f1),\n    TECLASTH30(60, R.drawable.ic_device_h30_h10, R.drawable.ic_device_h30_h10_disabled, R.string.devicetype_teclast_h30),\n    XWATCH(70, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_xwatch),\n    ZETIME(80, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_mykronoz_zetime),\n    ID115(90, R.drawable.ic_device_h30_h10, R.drawable.ic_device_h30_h10_disabled, R.string.devicetype_id115),\n    WATCH9(100, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_watch9),\n    ROIDMI(100, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi),\n    ROIDMI3(102, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi3),\n    TEST(1000, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_test);\n\n    private final int key;\n    @DrawableRes\n    private final int defaultIcon;\n    @DrawableRes\n    private final int disabledIcon;\n    @StringRes\n    private final int name;\n\n    DeviceType(int key, int defaultIcon, int disabledIcon, int name) {\n        this.key = key;\n        this.defaultIcon = defaultIcon;\n        this.disabledIcon = disabledIcon;\n        this.name = name;\n    }\n\n    public int getKey() {\n        return key;\n    }\n\n    public boolean isSupported() {\n        return this != UNKNOWN;\n    }\n\n    public static DeviceType fromKey(int key) {\n        for (DeviceType type : values()) {\n            if (type.key == key) {\n                return type;\n            }\n        }\n        return DeviceType.UNKNOWN;\n    }\n\n    @StringRes\n    public int getName() {\n        return name;\n    }\n\n    @DrawableRes\n    public int getIcon() {\n        return defaultIcon;\n    }\n\n    @DrawableRes\n    public int getDisabledIcon() {\n        return disabledIcon;\n    }\n}', '/*  Copyright (C) 2015-2018 Andreas Shimokawa, Carsten Pfeiffer, Daniele\n    Gobbetti, João Paulo Barraca, José Rebelo, Kranz, ladbsoft, maxirnilian,\n    protomors, Quallenauge, Sami Alaoui, tiparega, Vadim Kaushan\n\n    This file is part of Gadgetbridge.\n\n    Gadgetbridge is free software: you can redistribute it and/or modify\n    it under the terms of the GNU Affero General Public License as published\n    by the Free Software Foundation, either version 3 of the License, or\n    (at your option) any later version.\n\n    Gadgetbridge is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n    GNU Affero General Public License for more details.\n\n    You should have received a copy of the GNU Affero General Public License\n    along with this program.  If not, see <http://www.gnu.org/licenses/>. */\npackage nodomain.freeyourgadget.gadgetbridge.model;\n\nimport android.support.annotation.DrawableRes;\nimport android.support.annotation.StringRes;\n\nimport nodomain.freeyourgadget.gadgetbridge.R;\n\n/**\n * For every supported device, a device type constant must exist.\n *\n * Note: they key of every constant is stored in the DB, so it is fixed forever,\n * and may not be changed.\n */\npublic enum DeviceType {\n    UNKNOWN(-1, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_unknown),\n    PEBBLE(1, R.drawable.ic_device_pebble, R.drawable.ic_device_pebble_disabled, R.string.devicetype_pebble),\n    MIBAND(10, R.drawable.ic_device_miband, R.drawable.ic_device_miband_disabled, R.string.devicetype_miband),\n    MIBAND2(11, R.drawable.ic_device_miband2, R.drawable.ic_device_miband2_disabled, R.string.devicetype_miband2),\n    AMAZFITBIP(12, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_amazfit_bip),\n    AMAZFITCOR(13, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_amazfit_cor),\n    MIBAND3(14, R.drawable.ic_device_miband2, R.drawable.ic_device_miband2_disabled, R.string.devicetype_miband3),\n    VIBRATISSIMO(20, R.drawable.ic_device_lovetoy, R.drawable.ic_device_lovetoy_disabled, R.string.devicetype_vibratissimo),\n    LIVEVIEW(30, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_liveview),\n    HPLUS(40, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_hplus),\n    MAKIBESF68(41, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_makibes_f68),\n    EXRIZUK8(42, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_exrizu_k8),\n    Q8(43, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_q8),\n    NO1F1(50, R.drawable.ic_device_hplus, R.drawable.ic_device_hplus_disabled, R.string.devicetype_no1_f1),\n    TECLASTH30(60, R.drawable.ic_device_h30_h10, R.drawable.ic_device_h30_h10_disabled, R.string.devicetype_teclast_h30),\n    XWATCH(70, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_xwatch),\n    ZETIME(80, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_mykronoz_zetime),\n    ID115(90, R.drawable.ic_device_h30_h10, R.drawable.ic_device_h30_h10_disabled, R.string.devicetype_id115),\n    WATCH9(100, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_watch9),\n    ROIDMI(110, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi),\n    ROIDMI3(112, R.drawable.ic_device_roidmi, R.drawable.ic_device_roidmi_disabled, R.string.devicetype_roidmi3),\n    TEST(1000, R.drawable.ic_device_default, R.drawable.ic_device_default_disabled, R.string.devicetype_test);\n\n    private final int key;\n    @DrawableRes\n    private final int defaultIcon;\n    @DrawableRes\n    private final int disabledIcon;\n    @StringRes\n    private final int name;\n\n    DeviceType(int key, int defaultIcon, int disabledIcon, int name) {\n        this.key = key;\n        this.defaultIcon = defaultIcon;\n        this.disabledIcon = disabledIcon;\n        this.name = name;\n    }\n\n    public int getKey() {\n        return key;\n    }\n\n    public boolean isSupported() {\n        return this != UNKNOWN;\n    }\n\n    public static DeviceType fromKey(int key) {\n        for (DeviceType type : values()) {\n            if (type.key == key) {\n                return type;\n            }\n        }\n        return DeviceType.UNKNOWN;\n    }\n\n    @StringRes\n    public int getName() {\n        return name;\n    }\n\n    @DrawableRes\n    public int getIcon() {\n        return defaultIcon;\n    }\n\n    @DrawableRes\n    public int getDisabledIcon() {\n        return disabledIcon;\n    }\n}', 'app/src/main/java/nodomain/freeyourgadget/gadgetbridge/model/DeviceType.java', 'app/src/main/java/nodomain/freeyourgadget/gadgetbridge/model/DeviceType.java.1', 'Roidmi: fix duplicated DeviceType key', 'Fix duplicated DeviceType key introduced by the #1179 rebase..1']
+2026-07-09 01:36:22,223 | INFO | Dataset 'GHPR' loaded projects=0 | skipped files=1
+2026-07-09 01:36:22,223 | INFO | Loading dataset folder 'JIRA' as 'JIRA' | candidate files=7
+2026-07-09 01:36:22,746 | INFO | Dataset 'JIRA' loaded projects=7 | skipped files=0
+2026-07-09 01:36:22,746 | INFO | Loading dataset folder 'Kamei' as 'Kamei' | candidate files=3
+2026-07-09 01:36:22,982 | INFO | Dataset 'Kamei' loaded projects=3 | skipped files=0
+2026-07-09 01:36:22,983 | INFO | Loading dataset folder 'NASA' as 'NASA' | candidate files=9
+2026-07-09 01:36:23,376 | INFO | Dataset 'NASA' loaded projects=9 | skipped files=0
+2026-07-09 01:36:23,377 | INFO | Loading dataset folder 'Promise' as 'Promise' | candidate files=7
+2026-07-09 01:36:23,656 | INFO | Dataset 'Promise' loaded projects=7 | skipped files=0
+2026-07-09 01:36:23,657 | INFO | Loading dataset folder 'ReLinkCSV' as 'ReLink' | candidate files=3
+2026-07-09 01:36:23,688 | INFO | Dataset 'ReLink' loaded projects=3 | skipped files=0
+2026-07-09 01:36:23,689 | INFO | Loading dataset folder 'UnifiedBugDataSet_File' as 'UnifiedBugDataSet_File' | candidate files=1
+2026-07-09 01:36:24,035 | INFO | Dataset 'UnifiedBugDataSet_File' loaded projects=1 | skipped files=0
+2026-07-09 01:36:24,036 | INFO | Loading dataset folder 'apachejit' as 'ApacheJIT' | candidate files=1
+2026-07-09 01:36:25,005 | INFO | Dataset 'ApacheJIT' loaded projects=1 | skipped files=0
+2026-07-09 01:36:25,005 | INFO | Total loaded projects=51 from root=Data-set
+2026-07-09 01:36:25,006 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_loaded_projects.csv
+2026-07-09 01:36:25,006 | INFO | Running data quality profiling
+2026-07-09 01:36:26,863 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_quality_profile.csv
+2026-07-09 01:36:26,863 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_quality_summary_by_dataset.csv
+2026-07-09 01:36:26,864 | INFO | Running data complexity profiling
+2026-07-09 01:37:47,011 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_complexity_profile.csv
+2026-07-09 01:37:47,011 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_complexity_summary_by_dataset.csv
+2026-07-09 01:37:47,011 | INFO | Running data stability profiling
+2026-07-09 01:37:47,011 | INFO | Computing pairwise stability for dataset='AEEEM' | projects=5
+2026-07-09 01:37:47,535 | WARNING | Dataset 'ApacheJIT' has fewer than two projects; skipping pairwise stability.
+2026-07-09 01:37:47,535 | INFO | Computing pairwise stability for dataset='BugHunter' | projects=15
+2026-07-09 01:37:50,440 | INFO | Computing pairwise stability for dataset='JIRA' | projects=7
+2026-07-09 01:38:01,397 | INFO | Computing pairwise stability for dataset='Kamei' | projects=3
+2026-07-09 01:38:02,602 | INFO | Computing pairwise stability for dataset='NASA' | projects=9
+2026-07-09 01:38:04,735 | INFO | Computing pairwise stability for dataset='Promise' | projects=7
+2026-07-09 01:38:05,560 | INFO | Computing pairwise stability for dataset='ReLink' | projects=3
+2026-07-09 01:38:05,618 | WARNING | Dataset 'UnifiedBugDataSet_File' has fewer than two projects; skipping pairwise stability.
+2026-07-09 01:38:05,631 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_stability_pairwise_profile.csv
+2026-07-09 01:38:05,632 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_stability_summary_by_dataset.csv
+2026-07-09 01:38:05,632 | INFO | Running data leakage profiling
+2026-07-09 01:38:09,652 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_leakage_profile.csv
+2026-07-09 01:38:09,652 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_leakage_summary_by_dataset.csv
+2026-07-09 01:38:09,652 | INFO | Running baseline model-ranking stability profiling | folds=5 repeats=3
+2026-07-09 01:38:09,652 | INFO | Evaluating baseline models for AEEEM/equinox
+2026-07-09 01:38:13,832 | INFO | Evaluating baseline models for AEEEM/jdt
+2026-07-09 01:38:18,908 | INFO | Evaluating baseline models for AEEEM/lucene
+2026-07-09 01:38:24,586 | INFO | Evaluating baseline models for AEEEM/mylyn
+2026-07-09 01:38:31,710 | INFO | Evaluating baseline models for AEEEM/pde
+2026-07-09 01:38:37,784 | INFO | Evaluating baseline models for BugHunter/full_Android-Universal-Image-Loader_file
+2026-07-09 01:38:43,973 | INFO | Evaluating baseline models for BugHunter/full_BroadleafCommerce_file
+2026-07-09 01:38:51,815 | INFO | Evaluating baseline models for BugHunter/full_MapDB_file
+2026-07-09 01:38:58,660 | INFO | Evaluating baseline models for BugHunter/full_antlr4_file
+2026-07-09 01:39:05,377 | INFO | Evaluating baseline models for BugHunter/full_ceylon-ide-eclipse_file
+2026-07-09 01:39:12,231 | INFO | Evaluating baseline models for BugHunter/full_elasticsearch_file
+2026-07-09 01:39:24,527 | INFO | Evaluating baseline models for BugHunter/full_hazelcast_file
+2026-07-09 01:39:36,032 | INFO | Evaluating baseline models for BugHunter/full_junit_file
+2026-07-09 01:39:42,294 | INFO | Evaluating baseline models for BugHunter/full_mcMMO_file
+2026-07-09 01:39:49,248 | INFO | Evaluating baseline models for BugHunter/full_mct_file
+2026-07-09 01:39:55,379 | INFO | Evaluating baseline models for BugHunter/full_neo4j_file
+2026-07-09 01:40:03,619 | INFO | Evaluating baseline models for BugHunter/full_netty_file
+2026-07-09 01:40:12,200 | INFO | Evaluating baseline models for BugHunter/full_orientdb_file
+2026-07-09 01:40:20,279 | INFO | Evaluating baseline models for BugHunter/full_oryx_file
+2026-07-09 01:40:26,963 | INFO | Evaluating baseline models for BugHunter/full_titan_file
+2026-07-09 01:40:33,528 | INFO | Evaluating baseline models for JIRA/activemq-5.8.0
+2026-07-09 01:40:40,974 | INFO | Evaluating baseline models for JIRA/derby-10.5.1.1
+2026-07-09 01:40:47,617 | INFO | Evaluating baseline models for JIRA/groovy-1_6_BETA_2
+2026-07-09 01:40:53,346 | INFO | Evaluating baseline models for JIRA/hbase-0.95.2
+2026-07-09 01:41:00,295 | INFO | Evaluating baseline models for JIRA/hive-0.12.0
+2026-07-09 01:41:08,037 | INFO | Evaluating baseline models for JIRA/jruby-1.7.0.preview1
+2026-07-09 01:41:14,020 | INFO | Evaluating baseline models for JIRA/wicket-1.5.3
+2026-07-09 01:41:21,614 | INFO | Evaluating baseline models for Kamei/bugzilla
+2026-07-09 01:41:30,444 | INFO | Evaluating baseline models for Kamei/columba
+2026-07-09 01:41:39,706 | INFO | Evaluating baseline models for Kamei/postgres
+2026-07-09 01:42:01,840 | INFO | Evaluating baseline models for NASA/CM1
+2026-07-09 01:42:07,958 | INFO | Evaluating baseline models for NASA/KC3
+2026-07-09 01:42:12,942 | INFO | Evaluating baseline models for NASA/MC2
+2026-07-09 01:42:17,477 | INFO | Evaluating baseline models for NASA/MW1
+2026-07-09 01:42:22,433 | INFO | Evaluating baseline models for NASA/PC1
+2026-07-09 01:42:29,031 | INFO | Evaluating baseline models for NASA/PC2
+2026-07-09 01:42:35,658 | INFO | Evaluating baseline models for NASA/PC3
+2026-07-09 01:42:42,072 | INFO | Evaluating baseline models for NASA/PC4
+2026-07-09 01:42:49,096 | INFO | Evaluating baseline models for NASA/PC5
+2026-07-09 01:42:54,435 | INFO | Evaluating baseline models for Promise/ant-1.7
+2026-07-09 01:43:00,152 | INFO | Evaluating baseline models for Promise/camel-1.6
+2026-07-09 01:43:06,797 | INFO | Evaluating baseline models for Promise/jedit-4.3
+2026-07-09 01:43:12,657 | INFO | Evaluating baseline models for Promise/prop-2
+2026-07-09 01:43:26,048 | INFO | Evaluating baseline models for Promise/velocity-1.6
+2026-07-09 01:43:30,672 | INFO | Evaluating baseline models for Promise/xalan-2.7
+2026-07-09 01:43:37,166 | INFO | Evaluating baseline models for Promise/xerces-1.4
+2026-07-09 01:43:43,462 | INFO | Evaluating baseline models for ReLink/Apache
+2026-07-09 01:43:49,048 | INFO | Evaluating baseline models for ReLink/Safe
+2026-07-09 01:43:54,504 | INFO | Evaluating baseline models for ReLink/Zxing
+2026-07-09 01:44:01,055 | INFO | Evaluating baseline models for UnifiedBugDataSet_File/Unified-file
+2026-07-09 01:44:17,897 | INFO | Evaluating baseline models for ApacheJIT/dataset_apachejit_total
+2026-07-09 01:45:56,860 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_baseline_model_results.csv
+2026-07-09 01:45:56,863 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_baseline_model_summary.csv
+2026-07-09 01:45:56,864 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_model_ranking_stability.csv
+2026-07-09 01:45:56,864 | INFO | Running feature-importance and explanation-readiness profiling | folds=5 repeats=3
+2026-07-09 01:45:56,864 | INFO | Computing feature importance for AEEEM/equinox
+2026-07-09 01:46:24,190 | INFO | Computing feature importance for AEEEM/jdt
+2026-07-09 01:46:44,442 | INFO | Computing feature importance for AEEEM/lucene
+2026-07-09 01:47:01,407 | INFO | Computing feature importance for AEEEM/mylyn
+2026-07-09 01:47:22,110 | INFO | Computing feature importance for AEEEM/pde
+2026-07-09 01:47:44,011 | INFO | Computing feature importance for BugHunter/full_Android-Universal-Image-Loader_file
+2026-07-09 01:47:57,330 | INFO | Computing feature importance for BugHunter/full_BroadleafCommerce_file
+2026-07-09 01:48:20,825 | INFO | Computing feature importance for BugHunter/full_MapDB_file
+2026-07-09 01:48:36,726 | INFO | Computing feature importance for BugHunter/full_antlr4_file
+2026-07-09 01:48:51,505 | INFO | Computing feature importance for BugHunter/full_ceylon-ide-eclipse_file
+2026-07-09 01:49:09,290 | INFO | Computing feature importance for BugHunter/full_elasticsearch_file
+2026-07-09 01:50:06,502 | INFO | Computing feature importance for BugHunter/full_hazelcast_file
+2026-07-09 01:50:55,334 | INFO | Computing feature importance for BugHunter/full_junit_file
+2026-07-09 01:51:08,683 | INFO | Computing feature importance for BugHunter/full_mcMMO_file
+2026-07-09 01:51:24,653 | INFO | Computing feature importance for BugHunter/full_mct_file
+2026-07-09 01:51:38,019 | INFO | Computing feature importance for BugHunter/full_neo4j_file
+2026-07-09 01:52:05,160 | INFO | Computing feature importance for BugHunter/full_netty_file
+2026-07-09 01:52:33,691 | INFO | Computing feature importance for BugHunter/full_orientdb_file
+2026-07-09 01:52:59,559 | INFO | Computing feature importance for BugHunter/full_oryx_file
+2026-07-09 01:53:14,645 | INFO | Computing feature importance for BugHunter/full_titan_file
+2026-07-09 01:53:29,925 | INFO | Computing feature importance for JIRA/activemq-5.8.0
+2026-07-09 01:54:11,362 | INFO | Computing feature importance for JIRA/derby-10.5.1.1
+2026-07-09 01:54:54,926 | INFO | Computing feature importance for JIRA/groovy-1_6_BETA_2
+2026-07-09 01:55:28,426 | INFO | Computing feature importance for JIRA/hbase-0.95.2
+2026-07-09 01:56:09,593 | INFO | Computing feature importance for JIRA/hive-0.12.0
+2026-07-09 01:56:50,943 | INFO | Computing feature importance for JIRA/jruby-1.7.0.preview1
+2026-07-09 01:57:27,898 | INFO | Computing feature importance for JIRA/wicket-1.5.3
+2026-07-09 01:58:07,571 | INFO | Computing feature importance for Kamei/bugzilla
+2026-07-09 01:58:37,051 | INFO | Computing feature importance for Kamei/columba
+2026-07-09 01:59:04,241 | INFO | Computing feature importance for Kamei/postgres
+2026-07-09 02:00:12,237 | INFO | Computing feature importance for NASA/CM1
+2026-07-09 02:00:33,624 | INFO | Computing feature importance for NASA/KC3
+2026-07-09 02:00:54,476 | INFO | Computing feature importance for NASA/MC2
+2026-07-09 02:01:14,634 | INFO | Computing feature importance for NASA/MW1
+2026-07-09 02:01:34,844 | INFO | Computing feature importance for NASA/PC1
+2026-07-09 02:01:58,167 | INFO | Computing feature importance for NASA/PC2
+2026-07-09 02:02:20,416 | INFO | Computing feature importance for NASA/PC3
+2026-07-09 02:02:45,051 | INFO | Computing feature importance for NASA/PC4
+2026-07-09 02:03:11,787 | INFO | Computing feature importance for NASA/PC5
+2026-07-09 02:03:41,587 | INFO | Computing feature importance for Promise/ant-1.7
+2026-07-09 02:04:00,727 | INFO | Computing feature importance for Promise/camel-1.6
+2026-07-09 02:04:20,628 | INFO | Computing feature importance for Promise/jedit-4.3
+2026-07-09 02:04:37,611 | INFO | Computing feature importance for Promise/prop-2
+2026-07-09 02:05:46,747 | INFO | Computing feature importance for Promise/velocity-1.6
+2026-07-09 02:06:02,453 | INFO | Computing feature importance for Promise/xalan-2.7
+2026-07-09 02:06:20,950 | INFO | Computing feature importance for Promise/xerces-1.4
+2026-07-09 02:06:38,187 | INFO | Computing feature importance for ReLink/Apache
+2026-07-09 02:06:55,752 | INFO | Computing feature importance for ReLink/Safe
+2026-07-09 02:07:12,930 | INFO | Computing feature importance for ReLink/Zxing
+2026-07-09 02:07:31,885 | INFO | Computing feature importance for UnifiedBugDataSet_File/Unified-file
+2026-07-09 02:08:42,478 | INFO | Computing feature importance for ApacheJIT/dataset_apachejit_total
+/home/abhinav48/Home/SPARC/daqua/explainability/feature_importance.py:426: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  s = spearmanr(a[valid], b[valid]).correlation
+/home/abhinav48/Home/SPARC/daqua/explainability/feature_importance.py:426: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  s = spearmanr(a[valid], b[valid]).correlation
+/home/abhinav48/Home/SPARC/daqua/explainability/feature_importance.py:426: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  s = spearmanr(a[valid], b[valid]).correlation
+/home/abhinav48/Home/SPARC/daqua/explainability/feature_importance.py:426: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  s = spearmanr(a[valid], b[valid]).correlation
+/home/abhinav48/Home/SPARC/daqua/explainability/feature_importance.py:426: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  s = spearmanr(a[valid], b[valid]).correlation
+/home/abhinav48/Home/SPARC/daqua/explainability/feature_importance.py:426: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  s = spearmanr(a[valid], b[valid]).correlation
+2026-07-09 02:14:02,967 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_feature_importance_profile.csv
+2026-07-09 02:14:02,968 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_feature_importance_project_stability.csv
+2026-07-09 02:14:02,968 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_feature_importance_dataset_stability.csv
+2026-07-09 02:14:02,969 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_explanation_readiness.csv
+2026-07-09 02:14:02,969 | INFO | Computing DAQUA readiness scores
+2026-07-09 02:14:02,982 | INFO | Saved: outputs/profiles_9datasets_full/DAQUA_readiness_scores.csv
+2026-07-09 02:14:02,982 | INFO | DAQUA pipeline completed in 2326.66 seconds
+
+DAQUA readiness summary
+               dataset  quality_score  complexity_score  stability_score  leakage_score  model_stability_score  explanation_readiness_score  overall_readiness_score readiness_level          prediction_readiness
+UnifiedBugDataSet_File        74.7800           66.0300            80.00       100.0000                 100.00                        60.07                    79.25        moderate ready_with_reporting_controls
+                 Kamei        89.7133           57.5700            79.88        90.0000                  96.35                        56.82                    78.07        moderate ready_with_reporting_controls
+                ReLink        82.1667           65.7267            76.19       100.0000                  80.08                        48.80                    75.91        moderate ready_with_reporting_controls
+             ApacheJIT        84.7000           60.8300            80.00        90.0000                 100.00                        39.04                    75.45        moderate ready_with_reporting_controls
+                 AEEEM        78.4720           66.0280            71.77        79.2760                  86.10                        63.73                    73.87        moderate           usable_with_caution
+                  JIRA        77.5686           62.8714            83.59        89.8757                  84.25                        39.22                    73.15        moderate           usable_with_caution
+             BugHunter        66.6787           40.7193            68.91        97.7020                  83.84                        78.66                    71.54        moderate           usable_with_caution
+               Promise        81.6486           60.8400            60.03        96.5786                  75.02                        51.89                    71.29        moderate           usable_with_caution
+                  NASA        77.0067           58.3600            73.49        95.3411                  79.33                        35.50                    70.19        moderate           usable_with_caution
+
+Generated files
+- outputs/profiles_9datasets_full/DAQUA_loaded_projects.csv
+- outputs/profiles_9datasets_full/DAQUA_quality_profile.csv
+- outputs/profiles_9datasets_full/DAQUA_quality_summary_by_dataset.csv
+- outputs/profiles_9datasets_full/DAQUA_complexity_profile.csv
+- outputs/profiles_9datasets_full/DAQUA_complexity_summary_by_dataset.csv
+- outputs/profiles_9datasets_full/DAQUA_stability_pairwise_profile.csv
+- outputs/profiles_9datasets_full/DAQUA_stability_summary_by_dataset.csv
+- outputs/profiles_9datasets_full/DAQUA_leakage_profile.csv
+- outputs/profiles_9datasets_full/DAQUA_leakage_summary_by_dataset.csv
+- outputs/profiles_9datasets_full/DAQUA_baseline_model_results.csv
+- outputs/profiles_9datasets_full/DAQUA_baseline_model_summary.csv
+- outputs/profiles_9datasets_full/DAQUA_model_ranking_stability.csv
+- outputs/profiles_9datasets_full/DAQUA_feature_importance_profile.csv
+- outputs/profiles_9datasets_full/DAQUA_feature_importance_project_stability.csv
+- outputs/profiles_9datasets_full/DAQUA_feature_importance_dataset_stability.csv
+- outputs/profiles_9datasets_full/DAQUA_explanation_readiness.csv
+- outputs/profiles_9datasets_full/DAQUA_readiness_scores.csv
