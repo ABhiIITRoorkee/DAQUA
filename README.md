@@ -1,9 +1,4 @@
-Yes, you **should paste a summary with tables in the README**. For GitHub, the README should explain the objective, what DAQUA audits, how to run the scripts, and give a compact result snapshot. The uploaded paper defines DAQUA as a framework for auditing six readiness dimensions, namely data-quality, data-complexity, cross-project stability, leakage-signal readiness, model-ranking stability, and explanation readiness.  It also applies DAQUA to nine dataset families comprising 51 projects.  The workflow follows a two-path design: a scoring path for readiness profiles and a risk path for warnings and safeguards. 
 
-Use this command to create a detailed `README.md`:
-
-````bash
-cat > README.md <<'MD'
 # DAQUA: A Data Quality, Stability, Leakage, and Model-Ranking Readiness Framework for Reliable Software Defect Prediction
 
 This repository contains the implementation and experimental scripts for the research paper:
