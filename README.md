@@ -417,3 +417,6 @@ Abhinav Jamwal
 Department of Computer Science and Engineering
 Indian Institute of Technology Roorkee
 ```
+
+[![DOI](https://zenodo.org/badge/1314770567.svg)](https://doi.org/10.5281/zenodo.21788122)
+
