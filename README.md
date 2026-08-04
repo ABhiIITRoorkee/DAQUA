@@ -1,5 +1,7 @@
 # DAQUA: A Data Quality, Stability, Leakage, and Model-Ranking Readiness Framework for Reliable Software Defect Prediction
 
+[![DOI](https://zenodo.org/badge/1314770567.svg)](https://doi.org/10.5281/zenodo.21788122)
+
 This repository contains the implementation and experimental scripts for the research paper:
 
 **DAQUA: A Data Quality, Stability, Leakage, and Model-Ranking Readiness Framework for Reliable Software Defect Prediction**
@@ -417,6 +419,3 @@ Abhinav Jamwal
 Department of Computer Science and Engineering
 Indian Institute of Technology Roorkee
 ```
-
-[![DOI](https://zenodo.org/badge/1314770567.svg)](https://doi.org/10.5281/zenodo.21788122)
-
